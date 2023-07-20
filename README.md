@@ -1,54 +1,54 @@
 # Video2PDF
 
-適合將任何線上影片、課程壓制成一格一格播放的 PDF
+适合将任何线上影片、课程压制成一桢一桢播放的PDF
 
 ## pre-Installation
 
-需要先安裝 `moviepy`
+需要先安装 `moviepy`
 ```
 pip install moviepy
 ```
 
-### 執行
-#### 功能 1. 壓制
+### 执行
+#### 功能 1. 压制
 `python main.py xxx.mp4`
 
-* 需要兩個檔案 mp4, srt （不管有沒有內嵌字幕檔，都需要 srt 當時間參考點）
-* srt 必須是 `xxx.zh.srt`
-* 將同名的 mp4 與同名的 srt 放在一起，執行 `python main.py xxx.mp4` 等待一定時間即會產生 pdf
-* 如果影片已經有預設 srt 不需 srt 壓制進去只需要檔參考點，請用 `python main.py xxx.mp4 --embed`
+* 需要两个档案 mp4, srt （不管有没有内嵌字幕档，都需要 srt 当时间参考点）
+* srt 必须是 `xxx.zh.srt`
+* 将同名的 mp4 与同名的 srt 放在一起，执行 `python main.py xxx.mp4` 等待一定时间即会产生 pdf
+* 如果影片已经有预设 srt 不需 srt 压制进去只需要档参考点，请用 `python main.py xxx.mp4 --embed`
 
-#### 功能 2. 下載 Youtube 影片並下載字幕、翻譯
+#### 功能 2. 下载 Youtube 影片并下载字幕、翻译
 
 `python you_dt.py [youtube_url]`
 
-#### 功能 3. 純翻譯字幕
+#### 功能 3. 纯翻译字幕
 
 `python translate_srt.py xxxx.srt`
 
 
 
-### 注意事項
+### 注意事项
 
-* 檔案太大會遇到同時開啟個數限制
-* 先執行 `ulimit -n 4096` 可以解決
+* 档案太大会遇到同时开启个数限制
+* 先执行 `ulimit -n 4096` 可以解决
 
-### 不喜歡指定字體可以換
+### 不喜欢指定字体可以换
 
-執行 `python font.py` 察看你有哪些 font 可以用
+执行 `python font.py` 察看你有哪些 font 可以用
 
-### 推薦工具
+### 推荐工具
 
-* 下載工具：yt-dlp
-* 下載字幕工具：YouTube™ 雙字幕 https://chrome.google.com/webstore/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm?hl=zh-TW
-* 聽譯字幕工具：https://goodsnooze.gumroad.com/l/macwhisper
-* 翻譯字幕工具：https://translatesubtitles.co/
+* 下载工具：yt-dlp
+* 下载字幕工具：YouTube™ 双字幕 https://chrome.google.com/webstore/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm?hl=zh-TW
+* 听译字幕工具：https://goodsnooze.gumroad.com/l/macwhisper
+* 翻译字幕工具：https://translatesubtitles.co/
 
 
 ### TODO
 
-- [x] 雙語字幕
-- [x] 多核 CPU 平行處理
+- [x] 双语字幕
+- [x] 多核 CPU 平行处理
 - [ ] Streamlit UI 介面
-- [ ] 向量檢索
+- [ ] 向量检索
 - [ ] PDF searchable
